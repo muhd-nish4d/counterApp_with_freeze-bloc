@@ -102,7 +102,7 @@ class MyHomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              context.read<CounterBloc>().add(Decrement());
+              context.read<CounterBloc>().add(const Decrement());
               //another way
 
               // BlocProvider.of<CounterBloc>(context).add(Increment());
@@ -112,7 +112,7 @@ class MyHomePage extends StatelessWidget {
           ),
           FloatingActionButton(
             onPressed: () {
-              context.read<CounterBloc>().add(Increment());
+              context.read<CounterBloc>().add(const Increment());
               //another way
 
               // BlocProvider.of<CounterBloc>(context).add(Increment());
