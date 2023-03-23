@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -52,7 +50,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('state');
+    // log('state');
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -104,12 +102,12 @@ class MyHomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              context.read<CounterBloc>().add(Increment());
+              context.read<CounterBloc>().add(Decrement());
               //another way
 
               // BlocProvider.of<CounterBloc>(context).add(Increment());
             },
-            tooltip: 'Increment',
+            tooltip: 'Decrement',
             child: const Icon(Icons.minimize_rounded),
           ),
           FloatingActionButton(
